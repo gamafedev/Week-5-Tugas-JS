@@ -12,11 +12,13 @@
 //     })
 
 $('.search-button').on('click', function() {
-const Url = 'https://newsapi.org/v2/everything?' +
-          'q=."+$(".searchbar").val()+".&' +
-          'from=2022-02-11&' +
-          'sortBy=popularity&' +
-          'apiKey=65336a6330fc48f2adcda0ede1a697e9';
+const Url = "https://newsapi.org/v2/everything?" +
+          "q=."+
+          $(".searchbar").val() +
+          ".&" +
+          "from=2022-02-11&" +
+          "sortBy=popularity&" +
+          "apiKey=65336a6330fc48f2adcda0ede1a697e9";
 axios.get(Url)
 .then(data=>{
     // Mendapatkan data object articles
